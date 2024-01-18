@@ -1,19 +1,19 @@
 ---
 - summary: |
     Проверка успешной регистрации
-requirement: |
+  requirement: |
     Пользователь должен иметь возможность зарегистрироваться в игре  
-prerequisites: |
+  prerequisites: |
     Открыта страница регистрации ("Sign Up")
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Вводим Nickname
     - Вводим Email
     - Вводим Password
     - Повторно вводим введенный ранее Password
     - Нажимаем кнопку "Submit"
-expected-result: |
+  expected-result: |
     Пользователь успешно зарегистрирован
     
 - summary: |
