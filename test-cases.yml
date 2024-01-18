@@ -18,87 +18,87 @@
     
 - summary: |
     Проверка успешной авторизации
-requirement: |
+  requirement: |
     Пользователь должен войти в систему, имея верные имейлом и пароль
-prerequisites: |
+  prerequisites: |
     Открыта страница авторизации ("Sign In")
-test-data: |
+  test-data: |
     Email = Hello, Password = Hello3423
-steps:
+  steps:
     - Вводим Email
     - Вводим Password
     - Нажимаем кнопку "Submit"
-expected-result: |     
+  expected-result: |     
     Пользователь успешно авторизован
 
 - summary: |
     Проверка авторизации через GitHub
-requirement: |
+  requirement: |
     Пользователь должен иметь возможность авторизироваться, при наличии аккаунта на GitHub
-prerequisites: |
+  prerequisites: |
     Открыта страница авторизации или регистрации ("Sign In"/"Sign Out")
     Пользователь авторизован на GitHub
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Нажимаем кнопку "Sign in with Github"
-expected-result: |     
+  expected-result: |     
     Пользователь успешно авторизован
 
 - summary: |
     Проверка авторизации через Discord
-requirement: |
+  requirement: |
     Пользователь должен иметь возможность авторизироваться, при наличии аккаунта на Discord
-prerequisites: |
+  prerequisites: |
     Открыта страница авторизации или регистрации ("Sign In"/"Sign Out")
     Пользователь авторизован в Discord
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Нажимаем кнопку "Sign in with Discord"
-expected-result: |     
+  expected-result: |     
     Пользователь успешно авторизован
 
 - summary: |
     Проверка создания игры с ботом
-requirement: |
+  requirement: |
     Авторизованный пользователь должен иметь возможность создать игру
-prerequisites: |
+  prerequisites: |
     Пользователь авторизован
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Нажимаем на кнопку "Create a game"
     - Нажимаем на кнопку "With a bot" (Game Type)
     - Нажимаем на кнопку "Create Battle"
- expected-result: |     
+   expected-result: |     
     Игра c ботом успешно создана
 
 - summary: |
     Проверка создания игры без регистрации
-requirement: |
+  requirement: |
     Неавторизованный пользователь должен иметь возможность создать игру
-prerequisites: |
+  prerequisites: |
     Открыта главная страница сайта
     Пользователь не авторизован
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Нажимаем на кнопку "Try Simple Buttle" 
-expected-result: |     
+  expected-result: |     
     Игра без регистрации успешно создана
     
 - summary: |
     Проверка cоздания игры со случайным игроком
-requirement: |
+  requirement: |
     Пользователь должен иметь возможность создать игру против другого пользователя (случайного игрока)
-prerequisites: |
+  prerequisites: |
     Пользователь авторизован
-test-data: |
+  test-data: |
     User2:
     email - ameil@gmail.com
     password - asdfkjas2
-steps:
+  steps:
     - Авторизуемся пользователем 1
     - Нажимаем на кнопку "Create Game".
     - Нажимаем на кнопку "With others users" (Game Type) 
@@ -106,34 +106,34 @@ steps:
     - Авторизуемся пользователем 2
     - Открываем Лобби
     - В списке игр нажимаем на Fight от Пользователя 1
-expected-result: |     
+  expected-result: |     
    Игра с пользователем успешно создана
 
 - summary: |
     Проверка создания игры с уровнем сложности 4 звезды
-requirement: |
+  requirement: |
     Игрок должен иметь возможность изменять сложность состязаний
-prerequisites: |
+  prerequisites: |
     Пользователь авторизован
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Нажимаем на кнопку "Create Game"
     - Выбираем четыре звезды в поле "Level"
     - Нажимаем кнопку "With a bot" (Game Type)
     - Нажимаем на кнопку "Create Battle"
-expected-result: |     
+  expected-result: |     
     Игра с заданным уровнем сложности создана  
 
 - summary: |
     Проверка создания игры с конкретным заданием Boom
-requirement: |
+  requirement: |
     Игрок должен иметь возможность выбирать задания для состязаний из предложенного списка
-prerequisites: |
+  prerequisites: |
     Пользователь авторизован
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Нажимаем на кнопку "Create Game"
     - Нажимаем на кнопку "With a bot" (Game Type)
     - Выбираем задание "boom" во вкладке "Choose task by name or tags"
@@ -143,18 +143,18 @@ steps:
 
 - summary: |
     Проверка победы пользователя в игре
-requirement: |
+  requirement: |
     Игрок должен иметь возможность побеждать в состязании
-prerequisites: |
+  prerequisites: |
     Пользователь авторизован
-test-data: |
+  test-data: |
     const _ = require("lodash");
     const R = require("rambda");
     const solution = (width, length) => {
     return width * length;
     };
     module.exports = solution;
-steps:
+  steps:
     - Нажимаем на кнопку "Create Game"
     - Выбираем одну звезду в поле "Level"
     - Нажимаем на кнопку "With a bot" (Game Type)
@@ -163,128 +163,128 @@ steps:
     - В появившеся диалоговом окне выбираем язык node.js 16.17.0
     - Вводим код из "test-data"
     - Нажимаем кнопку "Run"
-expected-result: |     
+  expected-result: |     
     Пользователь победил и сообщение о победе в игре      
 
 - summary: |
     Проверка проигрыша пользователя в игре
-requirement: |
+  requirement: |
     Игрок должен иметь возможность проигрывать в состязании
-prerequisites: |
+  prerequisites: |
     Пользователь авторизован
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Нажимаем на кнопку "Create Game".
     - Нажимаем на кнопку "With a bot" (Game Type).
     - Выставляем ползунок "Time Control" в крайне левое положение.
     - Нажимаем на кнопку "Create Battle".
     - Ждем три минуты.
-expected-result: |     
+  expected-result: |     
    Пользователь проиграл и видит сообщение о поражении 
 
 - summary: |
     Проверка создания турнира
-requirement: |
+  requirement: |
     Игрок должен иметь возможность создавать турниры
-prerequisites: |
+  prerequisites: |
     Пользователь авторизован
-test-data: |
+  test-data: |
     В поле "Create a new tournament" значения выставлены по умолчанию
-steps:
+  steps:
     - Заходим во вкладку "Tournaments"
     - Кликаем "Tournaments Info"
     - Нажимаем на кнопку "Create" (в поле "Create a new tournament")
-expected-result: |     
+  expected-result: |     
     Турнир успешно создан
 
 - summary: |
     Проверка просмотра баттла в режиме online
-requirement: |
+  requirement: |
     Возможность просмотра баттла зрителям в режиме online
-prerequisites:
+  prerequisites:
     В списке лобби есть активные игры
     Пользователь авторизован
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Нажать кнопку «Show» справа от любого активного поединка
-expected-result: |
+  expected-result: |
     Пользователь просматривает игру в режиме online
 
 - summary: |
     Проверка отображения истории баттлов
-requirement: |
+  requirement: |
     Возможность просмотра истории баттлов
-prerequisites:
+  prerequisites:
     Пользователь авторизован
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - На главной странице открыть вкладку "Completed games"
-expected-result: |
+  expected-result: |
     Отображается список завершенных баттлов с вертикальной прокруткой вниз
 
 - summary: |
     Проверка переподключения участника к баттлу
-requirement: |
+  requirement: |
     Возможность переподключения участника к баттлу
-prerequisites:
+  prerequisites:
     В списке лобби есть активные игры
     Пользователь авторизован
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Нажать кнопку "Fight" справа от любого приглашения к баттлу
     - Нажать кнопку "Back to Home"
     - Нажать кнопку "Continue" справа от баттла с нашим никнеймом
-expected-result: |
+  expected-result: |
     Пользователь успешно перезашел в активную игру
 
 - summary: |
     Проверка создания турнира на предстоящую дату
-requirement: |
+  requirement: |
     Возможность организации турниров и турнирной сетки
-prerequisites:
+  prerequisites:
     Пользователь авторизован
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Кликнуть на никнейм в верхней правой части страницы
     - Открыть страницу "Tournaments"
     - Пролистать страницу вниз до формы создания турнира
     - В поле "Name" ввести любое название, например "Best tournament"
     - В поле "Starts at (UTC)" выбрать дату и время, которая будет наступать позже времени выполнения тест-кейса, например 12.12.2024 11:11 
-expected-result: |
+  expected-result: |
     Отображается страница "Tournaments", созданный турнир отображается в списке турниров
 
 - summary: |
     Проверка присоединения к активному турниру
-requirement: |
+  requirement: |
     Возможность пользователя присоединиться к турниру
- prerequisites:
+  prerequisites:
     Пользователь авторизован
     В списке есть активные турниры
-test-data: |
+  test-data: |
     No-data
-steps:
+  steps:
     - Открыть вкладку "Tournaments"
     - Нажать кнопку "Show" справа от любого активного турнира
     - Нажать кнопку "Join" справа от заголовка с названием турнира
-expected-result: |
+  expected-result: |
     Пользователь успешно присоединяется к выбранному турниру
 
 - summary: |
     Проверка отправки сообщения сопернику в игровом чате
-requirement: |
+  requirement: |
     Пользователь должен иметь возможность писать в чат сопернику
-prerequisites: 
+  prerequisites: 
     Пользователь авторизован
     Открыта любая созданная игра с ботом
-test-data: |
+  test-data: |
     Текст - "Hi, friend!"
-steps:
+  steps:
     - В поле чата с соперником ввести текст "Hi, friend!"
     - Нажать "Send"
-expected-result: |
+  expected-result: |
       Сообщение "Hi, friend!" отображается в чате
