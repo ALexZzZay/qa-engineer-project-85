@@ -71,7 +71,7 @@
     - Нажимаем на кнопку "Create a game"
     - Нажимаем на кнопку "With a bot" (Game Type)
     - Нажимаем на кнопку "Create Battle"
-   expected-result: |     
+  expected-result: |     
     Игра c ботом успешно создана
 
 - summary: |
