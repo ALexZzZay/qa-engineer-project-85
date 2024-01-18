@@ -1,0 +1,72 @@
+---
+- summary: |
+   Проверка успешной регистрации
+  status: pass
+
+- summary: |
+   Проверка успешной авторизации
+  status: pass
+
+- summary: |
+    Проверка авторизации через GitHub
+  status: pass
+
+- summary: |
+    Проверка авторизации через Discord
+  status: pass
+
+- summary: |
+    Проверка создания игры с ботом
+  status: pass
+
+- summary: |
+    Проверка создания игры без регистрации
+  status: pass
+
+- summary: |
+    Проверка cоздания игры со случайным игроком
+  status: pass
+
+- summary: |
+    Проверка создания игры с уровнем сложности 4 звезды
+  status: pass
+
+- summary: |
+    Проверка создания игры с конкретным заданием Boom
+  status: pass
+
+- summary: |
+    Проверка победы пользователя в игре
+  status: pass
+
+- summary: |
+     Проверка проигрыша пользователя в игре
+  status: pass
+
+- summary: |
+    ПроПроверка создания турнира
+  status: pass
+
+- summary: |
+    Проверка просмотра баттла в режиме online
+  status: pass
+
+- summary: |
+    Проверка отображения истории баттлов
+  status: pass
+
+- summary: |
+    Проверка переподключения участника к баттлу
+  status: pass
+
+- summary: |
+    Проверка создания турнира на предстоящую дату
+  status: pass
+
+- summary: |
+    Проверка присоединения к активному турниру
+  status: pass
+
+- summary: |
+    Проверка отправки сообщения сопернику в игровом чате
+  status: pass
